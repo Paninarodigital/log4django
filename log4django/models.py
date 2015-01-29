@@ -47,7 +47,10 @@ class LogRecord(models.Model):
 
     @extra.setter
     def extra(self, data):
-        self._extra = json.dumps(data)
+        try:
+            self._extra = json.dumps(data)
+        except TypeError:
+            self._extra = str(data)
 
     def __unicode__(self):
         return self.message

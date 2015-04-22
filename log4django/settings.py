@@ -10,6 +10,7 @@ PAGINATOR_RANGE = getattr(django_settings, 'LOG4DJANGO_PAGINATOR_RANGE', 15)
 EXTRA_DATA_INDENT = getattr(django_settings, 'LOG4DJANGO_EXTRA_DATA_INDENT', 4)
 AUTHENTICATION_PIPELINE = getattr(django_settings, 'LOG4DJANGO_AUTHENTICATION_PIPELINE', (
     'log4django.pipeline.authentication.is_logged',
+    'log4django.pipeline.authentication.hash_login',
 ))
 PERSISTATION_PIPELINE = getattr(django_settings, 'LOG4DJANGO_PERSISTATION_PIPELINE', (
     'log4django.pipeline.process_bundle_data.persist_record',

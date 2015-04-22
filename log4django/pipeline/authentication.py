@@ -11,6 +11,8 @@ def hash_login(request):
     hash_session = request.session.get('password', None)
     hash_get = request.GET.get('hash', None)
 
+    print hash_get, h
+
     if hash_session and hash_session == h:
         return True
     if hash_get and hash_get == h:

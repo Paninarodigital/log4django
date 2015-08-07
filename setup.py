@@ -21,7 +21,7 @@ setup(
     include_package_data=True,
     install_requires = [
         'Django', 'django-model-utils', 'django-tastypie',
-        'jsonpath', 'jsonpickle', 'mimeparse', 'python-dateutil',
+        'jsonpickle', 'mimeparse', 'python-dateutil',
         'django-log-request-id', 'south'
     ],
     extras_require = {
@@ -43,6 +43,7 @@ setup(
         'Topic :: Internet :: WWW/HTTP :: Browsers'
     ],
     dependency_links = [
+        'git+git://git@github.com:Paninarodigital/jsonpath.git#egg=jsonpath',
         'git+git://github.com/Yelp/python-gearman.git#egg=gearman-dev',
         'git+git://github.com/CodeScaleInc/django-gearman-commands.git#egg=django_gearman_commands-dev',
     ]
